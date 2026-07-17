@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sailing Race Results</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <p class="eyebrow">Sailing club</p>
+        <h1>Race table entry</h1>
+        <p class="description">
+          Add competitors as rows in a table, then calculate corrected times and race standings in one pass.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="field-grid">
+          <label>
+            Race name
+            <input type="text" id="raceName" value="Spring Series" />
+          </label>
+        </div>
+
+        <div class="table-card">
+          <table class="entry-table">
+            <thead>
+              <tr>
+                <th>Sailor</th>
+                <th>Boat</th>
+                <th>Sail #</th>
+                <th>Elapsed</th>
+                <th>Corrected</th>
+                <th>Diff</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="entryTableBody"></tbody>
+          </table>
+        </div>
+
+        <div class="actions">
+          <button id="addRowBtn">Add row</button>
+          <button id="calculateBtn">Calculate results</button>
+          <button id="saveRaceBtn">Save race</button>
+          <button id="exportBtn">Export CSV</button>
+        </div>
+
+        <div class="saved-section">
+          <h3>Saved race sheets</h3>
+          <p class="placeholder">Save a full table of competitors so you can restore the whole entry sheet next time.</p>
+          <div class="actions compact-actions">
+            <button id="saveTemplateBtn">Save current table</button>
+            <button id="loadTemplateBtn">Load saved table</button>
+          </div>
+          <div id="savedTemplates"></div>
+        </div>
+
+        <div class="results" id="results">
+          <h2>Results</h2>
+          <p class="placeholder">Add competitors to build the race table.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
